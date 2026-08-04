@@ -26,7 +26,7 @@ def main() -> int:
     """
     try:
         with BreweryClient() as client:
-            raw_data = client.fetch_breweries_page(page=1, per_page=5)
+            raw_data = client.fetch_all_breweries(max_pages=3)
 
             cleaner = DataCleaner(raw_data)
             cleaned_df = cleaner.process()
