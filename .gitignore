@@ -1,0 +1,30 @@
+# Ambientes virtuais
+.venv/
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqldb
+
+# Variáveis de ambiente e Segredos (CRÍTICO)
+.env
+*.pem
+*.json
+
+# Logs e IDEs
+*.log
+.vscode/
+.idea/
+
+# Ignora toda a pasta .github
+.github/copilot-instructions.md
+
+# Generated data and caches
+data/processed/
+.pytest_cache/
+.DS_Store
+Thumbs.db
+# Optionally ignore Parquet files to avoid committing large binaries
+*.parquet
