@@ -9,7 +9,7 @@ def test_main_returns_zero_on_success(monkeypatch, tmp_path):
     ]
 
     class DummyClient:
-        def fetch_breweries_page(self, page, per_page):
+        def fetch_all_breweries(self, max_pages=3):
             return expected_raw_data
 
         def __enter__(self):
@@ -47,7 +47,7 @@ def test_main_returns_one_on_brewery_error(monkeypatch):
         def __exit__(self, exc_type, exc_value, traceback):
             return False
 
-        def fetch_breweries_page(self, page, per_page):
+        def fetch_all_breweries(self, max_pages=3):
             raise BreweryClientError("failed")
 
     monkeypatch.setattr("main.BreweryClient", lambda: DummyClient())
@@ -65,7 +65,7 @@ def test_main_returns_two_on_unexpected_error(monkeypatch):
         def __exit__(self, exc_type, exc_value, traceback):
             return False
 
-        def fetch_breweries_page(self, page, per_page):
+        def fetch_all_breweries(self, max_pages=3):
             return [{
                 "id": "1",
                 "name": "Test Brewery",
