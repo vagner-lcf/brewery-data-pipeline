@@ -25,7 +25,7 @@ A lightweight ETL (Extract, Transform, Load) pipeline built in Python to consume
 
 Clone the repository and enter the project directory:
 ```bash
-git clone https://github.com/YOUR_USERNAME/open-brewery-pipeline.git
+git clone https://github.com/vagner-lcf/open-brewery-pipeline.git
 cd open-brewery-pipeline
 ```
 

@@ -25,7 +25,7 @@ Uma pipeline ETL (Extract, Transform, Load) leve em Python para consumir dados d
 
 Clone o repositório e entre na pasta do projeto:
 ```bash
-git clone https://github.com/YOUR_USERNAME/open-brewery-pipeline.git
+git clone https://github.com/vagner-lcf/open-brewery-pipeline.git
 cd open-brewery-pipeline
 ```
 
